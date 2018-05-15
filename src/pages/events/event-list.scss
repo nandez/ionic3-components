@@ -1,0 +1,11 @@
+event-list {
+    .no-scroll > .scroll-content {
+            overflow: hidden !important;
+        
+    }
+
+    .tab-buttons span.title {
+        padding-top:0;
+        text-transform: capitalize;
+    }
+}

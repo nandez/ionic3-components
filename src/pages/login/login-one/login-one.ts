@@ -1,6 +1,6 @@
 // import { FormBuilder, FormControl, Validator } from '@angular/forms';
 import { Component } from '@angular/core';
-import { AlertController, App, LoadingController, IonicPage } from 'ionic-angular';
+import { AlertController, App, LoadingController, IonicPage, Events } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,21 +15,18 @@ export class LoginOnePage {
   constructor(
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
-    public app: App
+    public app: App,
+    public events: Events
   ) { }
 
   login() {
     const loading = this.loadingCtrl.create({
-      duration: 500
+      duration: 500,
+      content:"Aguarde un instante..."
     });
 
     loading.onDidDismiss(() => {
-      const alert = this.alertCtrl.create({
-        title: 'Logged in!',
-        subTitle: 'Thanks for logging in.',
-        buttons: ['Dismiss']
-      });
-      alert.present();
+        this.events.publish('onLoginSuccess');
     });
 
     loading.present();

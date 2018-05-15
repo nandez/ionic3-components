@@ -1,6 +1,6 @@
 import { AppState } from './app.global';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, MenuController } from 'ionic-angular';
+import { Nav, Platform, MenuController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Subject } from 'rxjs/Subject';
@@ -11,7 +11,7 @@ import { Subject } from 'rxjs/Subject';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'HomePage';
+  rootPage: any = 'LoginOnePage';
   activePage = new Subject();
 
   pages: Array<{ title: string, component: any, active: boolean, icon: string }>;
@@ -25,11 +25,12 @@ export class MyApp {
     public statusBar: StatusBar,
     public splashscreen: SplashScreen,
     public global: AppState,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    public events: Events
   ) {
     this.initializeApp();
     this.rightMenuItems = [
-      { icon: 'home', active: true },
+      { icon: 'home', active: false },
       { icon: 'alarm', active: false },
       { icon: 'analytics', active: false },
       { icon: 'archive', active: false },
@@ -42,10 +43,9 @@ export class MyApp {
     ];
 
     this.pages = [
-      { title: 'Home', component: 'HomePage', active: true, icon: 'home' },
+      { title: 'Home', component: 'HomePage', active: false, icon: 'home' },
       { title: 'Accordion List', component: 'AccordionListPage', active: false, icon: 'map' },
-      { title: 'Ionic Official Components',
-        component: 'IonicOfficialComponentsPage', active: false, icon: 'ionic' },
+      { title: 'Ionic Official Components', component: 'IonicOfficialComponentsPage', active: false, icon: 'ionic' },
       { title: 'Ionic Native Features', component: 'IonicNativePage', active: false, icon: 'ionic' },
       { title: 'Login', component: 'LoginListPage', active: false, icon: 'archive' },
       { title: 'Lists', component: 'ListPage', active: false, icon: 'body' },
@@ -65,6 +65,10 @@ export class MyApp {
       this.pages.map(page => {
         page.active = page.title === selectedPage.title;
       });
+    });
+
+    this.events.subscribe('onLoginSuccess', () => {
+        this.nav.setRoot("HomePage");
     });
   }
 

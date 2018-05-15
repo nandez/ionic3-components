@@ -1,0 +1,96 @@
+<ion-content>
+    <ion-searchbar></ion-searchbar>
+    <ion-list no-margin style="position:relative;height: 100%">
+        <ion-scroll scrollX="true" scrollY="true" class="scrollList">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Puesto</th>
+                        <th>Jinete / Equino</th>
+                        <th>Etapa</th>
+                        <th>Salida</th>
+                        <th>Llegada</th>
+                        <th>Recuperacion</th>
+                        <th>Vel.</th>
+                        <th>Primero</th>
+                        <th>Anterior</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="list-competitors" (tap)="getDetailRider()">
+                        <td>
+                            <span class="vest">1</span>
+                        </td>
+                        <td>
+                            <div class="content-info">
+                                <div left class="country-div">
+                                    <img class="img-cmp" src="/assets/img/evotest/flags/uru.png" />
+                                </div>
+                                <div class="info-div">
+                                    <div class="vest">101</div>
+                                    <div class="nameRider">Juan Sosa</div>
+                                    <div class="nameEquine">Tato SM</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>4</td>
+                        <td>08:00:00</td>
+                        <td>09:13:11</td>
+                        <td>02:44</td>
+                        <td>18,2</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr class="list-competitors" (tap)="getDetailRider()">
+                        <td>
+                            <span class="vest">2</span>
+                        </td>
+                        <td>
+                            <div class="content-info">
+                                <div left class="country-div">
+                                    <img class="img-cmp" src="/assets/img/evotest/flags/uru.png" />
+                                </div>
+                                <div class="info-div">
+                                    <div class="vest">132</div>
+                                    <div class="nameRider">Claudio Montes</div>
+                                    <div class="nameEquine">Pelincho</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>4</td>
+                        <td>08:00:00</td>
+                        <td>09:16:41</td>
+                        <td>03:04</td>
+                        <td>17,12</td>
+                        <td>00:04:23</td>
+                        <td>00:04:23</td>
+                    </tr>
+                    <tr class="list-competitors" (tap)="getDetailRider()">
+                        <td>
+                            <span class="vest">2</span>
+                        </td>
+                        <td>
+                            <div class="content-info">
+                                <div left class="country-div">
+                                    <img class="img-cmp" src="/assets/img/evotest/flags/uru.png" />
+                                </div>
+                                <div class="info-div">
+                                    <div class="vest">132</div>
+                                    <div class="nameRider">Pepe Asconegui</div>
+                                    <div class="nameEquine">Moreira</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>4</td>
+                        <td>08:00:00</td>
+                        <td>09:44:31</td>
+                        <td>08:22</td>
+                        <td>16,44</td>
+                        <td>00:24:53</td>
+                        <td>00:07:13</td>
+                    </tr>
+                </tbody>
+            </table>
+        </ion-scroll>
+    </ion-list>
+</ion-content>

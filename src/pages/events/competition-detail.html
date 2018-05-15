@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name="refresh"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-item style="background-image: url(/assets/img/evotest/endurance01.jpg);">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col col-8 class="textInfo">
+                    <p>CEI 3* 160 km</p>
+                    <p>22/05/2018</p>
+                    <p>150 Competidores</p>
+                    <p>Hora de Inicio: 06:00</p>
+                </ion-col>
+                <ion-col col-4 center>
+                    <ion-row justify-content-center>
+                        <ion-badge class="status" item-right>Sin Iniciar</ion-badge>
+                    </ion-row>
+                    <ion-row justify-content-center>
+                        <img src="assets/img/evotest/flags/uru.png" />
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+    <super-tabs scrollTabs=false tabsPlacement="top">
+        <super-tab [root]="resultsRoot" title="Resultados"></super-tab>
+        <super-tab [root]="summaryRoot" title="Resumen"></super-tab>
+    </super-tabs>
+</ion-content>

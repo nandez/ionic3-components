@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+<ion-content class="no-scroll">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-searchbar showCancelButton="true" placeholder="¿Que está buscando?">
+        </ion-searchbar>
+    </ion-navbar>
+    <super-tabs scrollTabs=false tabsPlacement="top">
+        <super-tab [root]="nextEventsRoot" title="Próximos Eventos"></super-tab>
+        <super-tab [root]="eventResultsRoot" title="Resultados"></super-tab>
+    </super-tabs>
+</ion-content>

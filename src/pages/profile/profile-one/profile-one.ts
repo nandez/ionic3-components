@@ -8,7 +8,7 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class ProfileOnePage {
   posts = [];
-  imageUrl: string = 'assets/img/profile/profile-cover.jpg';
+  imageUrl: string = '/assets/img/evotest/profile-bg.jpg';
 
   constructor(public navCtrl: NavController) {
     for (let i = 0; i < 10; i++) {

@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, Tabs } from 'ionic-angular';
+import { EventListPage } from '../events/event-list';
+import { ProfileOnePage } from '../profile/profile-one/profile-one';
+
+
 
 @IonicPage()
 @Component({
@@ -7,14 +11,22 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+    
+    @ViewChild('myTabs') tabRef: Tabs;
+    
+    isProfile =  false;
 
-  drawerOptions: any;
-  constructor(public navCtrl: NavController) {
-    this.drawerOptions = {
-      handleHeight: 50,
-      thresholdFromBottom: 200,
-      thresholdFromTop: 200,
-      bounceBack: true
-    };
+    tab1Root = EventListPage;
+    tab2Root = EventListPage;
+    tab3Root = EventListPage;
+    tab4Root = ProfileOnePage;
+
+  constructor() {
+
+  }
+
+  public onTabsChange() {
+    let selectedTab = this.tabRef.getSelected();
+    this.isProfile = selectedTab.index == 3;
   }
 }

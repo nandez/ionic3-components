@@ -1,0 +1,95 @@
+page-competition-detail {
+    .textInfo p {
+        color:white;
+    }
+
+    .text{padding-top: 30px;}
+	.tag{font-size:15px;}
+	.scrollList{
+		position: absolute;
+	  bottom: 0;
+	  top:0;
+	  left: 0;
+	  right: 0;
+	}
+	.img-cmp{
+		margin-top: 11px;
+		width: 30px;
+	}
+	.list-competitors{
+		ion-col{border-top:1px solid #ddd;}
+		font-size: 1.4rem;    
+	}
+	.pagesbtn{
+		margin:1px;
+	}
+	tr:nth-child(odd) {background: #dfdfe0}
+	tr:last-child {border-bottom: 1px solid #c7c7c9;}
+	.vest{font-weight: bold;}
+	.nameRider{font-size: 1.2rem;white-space: nowrap;}
+	.nameEquine{font-size: 1.2rem;white-space: nowrap;}
+	.country-div{margin-right: 6px;}
+	.info-div{margin-right: 6px;}
+	.content-info{
+    overflow-x: hidden;
+    text-overflow: unset;
+		white-space: nowrap;
+	}
+	th{
+		background: #f0f0f0;
+		border-bottom: 2px solid #c7c7c9;
+		vertical-align: bottom;
+		text-align: center;
+		padding: 7px 2px;
+		color:#1f5b94;
+	}
+	td{
+		padding: 5px;
+	  line-height: 1.428571429;
+	  vertical-align: top;
+	  border-top: 1px solid #c7c7c9;
+		border-right:1px solid #c7c7c9;
+		text-align: center;
+		vertical-align: middle;
+	}
+	table{
+		width: 100%;
+	}
+	.background-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        position: relative;
+      }
+
+	  .play-block {
+	    position: absolute;
+	    left: 30px;
+	    bottom: 10px;
+
+	    [icon-small] {
+	      z-index: 99;
+	    }
+	  }
+
+	  [parallax-title] {
+	    z-index: 9;
+	    padding-top: 5px;
+	    display: block;
+	    position: relative;
+	    margin: 0 30px;
+	    font-size: 17px !important;
+	  }
+
+	  .social {
+	    z-index: 99;
+	    position: relative;
+	    margin: 10px;
+	    color:#FFFFFF !important;
+      }
+
+      .tab-buttons span.title {
+          padding-top:0;
+          text-transform: capitalize;
+      }
+}

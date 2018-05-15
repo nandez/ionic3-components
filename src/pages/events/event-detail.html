@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name="refresh"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list no-lines>
+        <ion-item style="background-image: url(/assets/img/evotest/llayllay.jpg);">
+            <ion-grid>
+                <ion-row align-items-center>
+                    <ion-col col-8 class="textInfo">
+                        <p>Llay Llay</p>
+                        <p>22/05/2018</p>
+                        <p>150 Competidores</p>
+                        <p>Algun otro dato...</p>
+                    </ion-col>
+                    <ion-col col-4 center>
+                        <ion-row justify-content-center>
+                            <ion-badge class="status" item-right>Sin Iniciar</ion-badge>
+                        </ion-row>
+                        <ion-row justify-content-center>
+                            <img src="assets/img/evotest/flags/uru.png" />
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+        <ion-item (tap)="goToCompetition()" *ngFor="let user of users" detail-push>
+            <ion-avatar item-start>
+                <img src="http://50.6.74.33/home/wp-content/uploads/2014/02/fei.png" />
+            </ion-avatar>
+            <h2>CEI 3* - 21/05/2018</h2>
+            <p>06:00:00 - Sin Iniciar</p>
+        </ion-item>
+    </ion-list>
+</ion-content>
